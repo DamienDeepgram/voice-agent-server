@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deepgram-voice-agent-proxy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: deepgram-voice-agent-proxy
+  template:
+    metadata:
+      labels:
+        app: deepgram-voice-agent-proxy
+    spec:
+      containers:
+      - name: deepgram-voice-agent-proxy
+        image: 396185571030.dkr.ecr.us-east-2.amazonaws.com/deepgram-voice-agent-proxy:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 3000
+        env:
+        - name: DEEPGRAM_API_KEY
+          valueFrom:
+            secretKeyRef:
+              name: deepgram-secrets
+              key: DEEPGRAM_API_KEY
+        - name: DEEPGRAM_VOICE_AGENT_URL
+          value: "wss://api.deepgram.com/v1/listen"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: deepgram-voice-agent-proxy
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 3000
+  selector:
+    app: deepgram-voice-agent-proxy 

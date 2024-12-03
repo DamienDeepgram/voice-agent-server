@@ -1,0 +1,71 @@
+- AccessConfig:
+    AuthenticationMode: API_AND_CONFIG_MAP
+    BootstrapClusterCreatorAdminPermissions: null
+  Arn: arn:aws:eks:us-east-2:396185571030:cluster/voice-agent-cluster
+  CertificateAuthority:
+    Data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURCVENDQWUyZ0F3SUJBZ0lJQTc4MDdrR0FoOXd3RFFZSktvWklodmNOQVFFTEJRQXdGVEVUTUJFR0ExVUUKQXhNS2EzVmlaWEp1WlhSbGN6QWVGdzB5TkRFeU1ETXdOREUxTWpaYUZ3MHpOREV5TURFd05ESXdNalphTUJVeApFekFSQmdOVkJBTVRDbXQxWW1WeWJtVjBaWE13Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURoQS9CYUc5S25sQVFPbE8rNDhYaSsvNis5QkdGcWxaUENUMHpLcnI2cVlveFVkeUkwaVdURVhNZmkKRk9va2FHWVF3VklPbmtDMk9xUkVZVURZNG5xUS9hZGxSRkpGMzdUSG5TNFdjS2c3M3hSMGM3UkJCaVRZTjFRaApVRUJQblFUd0N4eVV6OWFJWlFxSU5Ic2c2b2lIa0hLa2pSUG42Uksvc0FXaGZBVzI0d016RDdyeC9ocHIyUGlCCjJ3eHo2cXF2Uit1cEtUbGs4WHdxU1luSzBtSVlSdkRBSEdRbnYyUFk2Z3I4djN2d3pMaVJGNXhTWGFyS2d1RXYKM2syWjFIQW42ajBCLzY2YWV6SEg1QTB6MjBuNW1tdDlsRTRtMnhDTklwZWFaZ09VWVVNeUpHRkxKSGlYSkl3awovMU5UL2tZSUNMZ3c1WTdpdGxCSnpnN0Y0VnlyQWdNQkFBR2pXVEJYTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJSdkRlMk00OEtwQ2lCSlFYMy9VOUZaeHNaU2xqQVYKQmdOVkhSRUVEakFNZ2dwcmRXSmxjbTVsZEdWek1BMEdDU3FHU0liM0RRRUJDd1VBQTRJQkFRQnZVZjBYdE9nYQpSaHE0aWN2cnF0aDdqRjIrb01IcXVZSVU3dms4WWUzZXFLS0I5TVI5VnBOSHJmVWl4VTBncU5JSEpFdVk0NFl3CjNVVXN5TEpVM09rVmJ2ckE4VXlHazlGajJRdWZScGJsbkYxN3VsbHRONEE1TTk1T1RFME1YM24vZTAzcXI5UmEKZ05paHMwRDhtdWVuSHV5WFpjUW5XVU82MWhtYVRqbVZnbzFLZkIwRzlFeFhHSERkN2pPd052U2kxenl5MW9HbApuNENlQUNMVERUWUdIWWdwVDczaTJnU253dTRRZkhWQ0FjYXdYeERZaFF5L25GRHo5eC9nSjVXK3hMRFpKMkNlCk40QkNNREpFM2p4TFZoRGdpOHhmVU0yc3paZi9nVTdRSDB0V2tXNkh1SEgrQitDTTBkdGNNaVlocHZyZkhLYVMKNjJXeENmblNBWHNDCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+  ClientRequestToken: null
+  ConnectorConfig: null
+  CreatedAt: "2024-12-03T04:16:06.395Z"
+  EncryptionConfig: null
+  Endpoint: https://5658D13312D8709A4598E267B6927727.gr7.us-east-2.eks.amazonaws.com
+  Health:
+    Issues: []
+  Id: null
+  Identity:
+    Oidc:
+      Issuer: https://oidc.eks.us-east-2.amazonaws.com/id/5658D13312D8709A4598E267B6927727
+  KubernetesNetworkConfig:
+    IpFamily: ipv4
+    ServiceIpv4Cidr: 10.100.0.0/16
+    ServiceIpv6Cidr: null
+  addons:
+  - name: vpc-cni
+    version: latest
+    attachPolicyARNs:
+      - arn:aws:iam::396185571030:policy/AmazonEKS_CNI_Policy
+    podIdentityAssociations:
+      - name: vpc-cni-irsa
+        namespace: kube-system
+        serviceAccounts:
+          - aws-node
+  Logging:
+    ClusterLogging:
+    - Enabled: false
+      Types:
+      - api
+      - audit
+      - authenticator
+      - controllerManager
+      - scheduler
+  Name: voice-agent-cluster
+  OutpostConfig: null
+  PlatformVersion: eks.20
+  ResourcesVpcConfig:
+    ClusterSecurityGroupId: sg-047e48748ae7ef739
+    EndpointPrivateAccess: false
+    EndpointPublicAccess: true
+    PublicAccessCidrs:
+    - 0.0.0.0/0
+    SecurityGroupIds:
+    - sg-0b2a918760ac544e9
+    SubnetIds:
+    - subnet-08b5eecd2725be49e
+    - subnet-06013146463adb61d
+    - subnet-05df108e0e94f3278
+    - subnet-061fdf431a07f9e8a
+    - subnet-0f347fbce1a12e61a
+    - subnet-0e66d81ace564ce38
+    VpcId: vpc-040e4d1357dbdc7f8
+  RoleArn: arn:aws:iam::396185571030:role/eksctl-voice-agent-cluster-cluster-ServiceRole-eoRfAwCRvHOk
+  Status: ACTIVE
+  Tags:
+    Name: eksctl-voice-agent-cluster-cluster/ControlPlane
+    alpha.eksctl.io/cluster-name: voice-agent-cluster
+    alpha.eksctl.io/cluster-oidc-enabled: "false"
+    alpha.eksctl.io/eksctl-version: 0.187.0
+    aws:cloudformation:logical-id: ControlPlane
+    aws:cloudformation:stack-id: arn:aws:cloudformation:us-east-2:396185571030:stack/eksctl-voice-agent-cluster-cluster/40d302b0-b12d-11ef-9f4b-0a765e6dadf1
+    aws:cloudformation:stack-name: eksctl-voice-agent-cluster-cluster
+    eksctl.cluster.k8s.io/v1alpha1/cluster-name: voice-agent-cluster
+  Version: "1.30"
